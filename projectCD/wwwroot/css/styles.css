@@ -1,0 +1,54 @@
+﻿body {
+    background-color: #c1c9c1;
+    line-height: 1.6em;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+} 
+.navbar-brand img {
+    width: 50px;
+}
+a {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2em;
+    color: #07aeac;
+}
+a:hover {
+    color: #07aeac;
+}
+h1 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+h2 {
+    font-family: 'Righteous', cursive;
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#bg {
+    background-image: url(../images/cds.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    height: 70vh;
+    opacity: 0.6;
+}
+.backContainer {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    background-color: white;
+}
+.search {
+    margin-bottom: 2em;
+}
+
+

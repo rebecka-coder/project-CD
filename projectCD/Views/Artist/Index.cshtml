@@ -1,0 +1,37 @@
+@model IEnumerable<projectCD.Models.Artist>
+
+@{
+    ViewData["Title"] = "Index";
+}
+    <div class="backContainer">
+        <h1>Mina Artister</h1>
+
+        <p>
+            <a asp-action="Create">Lägg till</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ArtistId">Uppdatera</a> |
+                            <a asp-action="Details" asp-route-id="@item.ArtistId">Visa info</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ArtistId">Radera</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>

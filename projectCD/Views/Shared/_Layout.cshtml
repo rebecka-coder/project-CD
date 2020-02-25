@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>project-MVC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/styles.css" type="text/css" />
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a asp-controller="Home" class="navbar-brand" asp-action="Index"><img src="~/images/cdlogo.png" alt="CD logo"/></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a asp-controller="Artist" class="nav-link" asp-action="Index">Artist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Album" class="nav-link" asp-action="Index">Album</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="User" class="nav-link" asp-action="Index">Admin</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

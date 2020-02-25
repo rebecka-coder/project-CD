@@ -1,0 +1,50 @@
+@model IEnumerable<projectCD.Models.Album>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="backContainer">
+<h1>Mina album</h1>
+
+<div class="search">
+<form asp-controller="Album" class="form-inline my-2 my-lg-0" asp-action="Index">
+    <input type="search" class="form-control mr-sm-2" name="searchString" placeholder="Sök album/artist.." aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sök</button>
+</form>
+    </div>
+
+<p>
+    <a asp-action="Create">Lägg till</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AlbumId">Uppdatera</a> |
+                <a asp-action="Details" asp-route-id="@item.AlbumId">Visa info</a> |
+                <a asp-action="Delete" asp-route-id="@item.AlbumId">Radera</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    </div>

@@ -1,0 +1,37 @@
+@model projectCD.Models.Album
+
+@{
+    ViewData["Title"] = "Details";
+}
+    <div class="backContainer">
+        <h1>Visa info</h1>
+
+        <div>
+            <h4>Album</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Artist)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Artist.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Genre)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Genre)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.AlbumId">Uppdatera</a> |
+            <a asp-action="Index">Tillbaka till listan</a>
+        </div>
+        </div>
